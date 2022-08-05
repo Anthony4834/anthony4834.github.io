@@ -1,0 +1,140 @@
+.projectsBox {
+    /* background-color: #1a171f;
+    padding: 2vw;
+    border-radius: 25px;
+    display: inline-block; */
+}
+.projectsBox .subHeader {
+    margin-bottom: 2vh;
+}
+.projectsBox ul {
+    list-style-type: none;
+}
+.projectsBox ul {
+    width: 80vw;
+    text-align: center;
+    margin: 0px auto;
+}
+.projectsBox ul li {
+    padding: 1vh 1vw;
+    letter-spacing: 0.6vw;
+    display: inline-block;
+    
+}
+
+.projectsBox .ulDetails {
+    color: white;
+    text-align: center;
+    position: relative;
+    font-family: main-font-bold;
+    letter-spacing: normal;
+    /* background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../../castle.png); */
+    padding: 6vh 5vw;
+    filter: brightness(auto);
+    transition: filter 0.5s, color 0.3s, background-size 0.5s, background-position 0.5s;
+}
+.projectsBox .castle-logistics {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../../castle.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.projectsBox .bokemon {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../../bokemon.jpg);
+    background-size: fill;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+}
+img {
+    position: relative;
+    float: left;
+    width: 20vw;
+    border-radius: 5%;
+    top: 1vw;
+    margin-right: 1vw;
+}
+.slick-slider {
+    width: 100%;
+}
+.slick-next, .slick-prev {
+    z-index: 5;
+    padding: 2vw;
+}
+.projectsBox a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 720px) {
+    .projectsBox {
+        margin-top: 10vh;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .2); */
+
+    }
+    .projectsBox .ulDetails {
+        line-height: 4vw;
+    }
+    .box ul li {
+        font-size: 1.5vw;
+        letter-spacing: 0.3vw;
+    }
+    .projectsBox ul {
+        margin: 0px;
+        padding: 0px;
+        text-align: left;
+    }
+    .projectsBox .ulDetails {
+        margin-top: -10px;
+        padding: 7vw;
+
+    }
+    .projectsBox ul li:first-of-type {
+        padding: 0.1vw;
+    }
+    .projectsBox a:hover .ulDetails {
+        filter: brightness(1.8);
+        color: transparent;
+    }
+    .projectsBox a:hover .castle-logistics {
+        background-position-y: 10%;
+    }
+    .projectsBox a:hover .bokemon {
+        background-position-y: 45%;
+    }
+    .slick-list {
+        border-radius: 25px !important;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .2); */
+    }
+    .slick-slider {
+        width: 58vw;
+        /* border-radius: 15px; */
+    }
+    .slick-arrow {
+        opacity: 0.5;
+        width: 10% !important;
+        height: 10% !important;
+        filter: brightness(2);
+        transition: left 1.5s, opacity 1.5s;
+    }
+    .slick-next {
+        left: 52vw;
+        transform: rotate(-90deg) !important;
+    }
+    .slick-next:hover {
+        opacity: 1;
+        left: 52.4vw !important;
+    }
+    .slick-prev {
+        left: 0.4vw !important;
+        z-index: 5 !important;
+        transform: rotate(90deg) !important;
+    }
+    .slick-prev:hover {
+        opacity: 1;
+        left: -0vw !important;
+    }
+
+}
+@media all and (max-width: 719px) {
+    .projectsBox .ulDetails {
+        width: 90vw;
+    }
+}
