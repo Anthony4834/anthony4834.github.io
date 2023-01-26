@@ -7,12 +7,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import arrow from '../../arrow.png';
 
-const ProjectsBox = ({slideIn, yOffset, mobile}) => {
+const ProjectsBox = ({slideIn, yOffset, mobile, subHeader}) => {
+
+    const yOffsetReq = mobile ? 50 : 100;
 
 
-    const yOffsetReq = () => {
-        return mobile ? 50 : 100;
-    }
     const settings = {
         dots: false,
         lazyLoad: true,
@@ -26,12 +25,12 @@ const ProjectsBox = ({slideIn, yOffset, mobile}) => {
     };
 
     return(<><AnimatePresence>
-        {yOffset >= yOffsetReq() && <motion.div 
+        {yOffset >= yOffsetReq && <motion.div 
             className="box projectsBox"
             initial={{y: '8vh', opacity: 0, }}
             animate={{...slideIn, opacity: 1}}
             exit={{opacity: 0}}>
-                <h2 className="subHeader">Projects</h2>
+                <h2 className="subHeader">{subHeader}</h2>
                 <Slider {...settings} centerPadding={0}>
                     <a href="http://54.202.53.15" target={"_blank"}><p className="ulDetails castle-logistics">
                         Designed and developed a full-stack

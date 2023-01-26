@@ -18,6 +18,7 @@
     top: 15vh;
 }
 .experienceList {
+    font-size: 0.8rem;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
@@ -32,6 +33,7 @@
     padding: 1vw;
     width: 31vw;
     display: inline-block;
+    font-size: 1.5vw !important;
 }
 .experienceDetails {
     text-align: justify;

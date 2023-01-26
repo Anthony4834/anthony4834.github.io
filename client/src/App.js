@@ -5,6 +5,8 @@ import ProjectsBox from './components/projectsBox/ProjectsBox';
 import arrow from './arrow.png';
 import {AnimatePresence, motion} from 'framer-motion';
 import ExperienceBox from './components/experienceBox/ExperienceBox';
+import Footer from './components/footer/footer';
+import AboutBox from './components/AboutBox/AboutBox';
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
     setMobile(window.innerWidth < 720 ? true : false);
+    document.title = "Anthony"
   }, [])
 
   const bouncingArrow = <AnimatePresence>
@@ -41,11 +44,12 @@ function App() {
 
   return (
     <div className="App">
-      <p id="offset">{yOffset}</p>
-      <IntroBox slideIn={slideIn}/>
+      {/* <p id="offset">{yOffset}</p> */}
+      <IntroBox slideIn={slideIn} subHeader={"I build things with code"}/>
       {yOffset < arrowOffsetReq() && bouncingArrow}
-      <ProjectsBox slideIn={slideIn} yOffset={yOffset} mobile={mobile}/>
-      <ExperienceBox yOffset={yOffset} slideIn={slideIn} mobile={mobile}/>
+      <ProjectsBox slideIn={slideIn} yOffset={yOffset} mobile={mobile} subHeader={"Projects"}/>
+      <ExperienceBox yOffset={yOffset} slideIn={slideIn} mobile={mobile} subHeader={"Experience"}/>
+      <AboutBox slideIn={slideIn} yOffset={yOffset} mobile={mobile} subHeader={"About"}/>
     </div>
   );
 }
